@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Apps</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>🕒 Countdown Apps</h1>
+        <p>Create and manage multiple countdown timers</p>
+      </header>
+      
+      <main>
+        <section class="add-countdown">
+          <h2>Add New Countdown</h2>
+          <form id="countdown-form">
+            <div class="form-group">
+              <label for="countdown-name">Event Name:</label>
+              <input type="text" id="countdown-name" placeholder="e.g., New Year 2025" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="countdown-date">Target Date:</label>
+              <input type="datetime-local" id="countdown-date" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="countdown-color">Color Theme:</label>
+              <select id="countdown-color">
+                <option value="blue">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+              </select>
+            </div>
+            
+            <button type="submit">Create Countdown</button>
+          </form>
+        </section>
+        
+        <section class="countdowns-container">
+          <h2>Active Countdowns</h2>
+          <div id="countdowns-list" class="countdowns-grid">
+            <!-- Countdown cards will be generated here -->
+          </div>
+        </section>
+      </main>
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
